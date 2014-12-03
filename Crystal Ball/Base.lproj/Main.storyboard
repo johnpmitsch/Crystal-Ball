@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="zOX-MG-0al">
+                                <rect key="frame" x="16" y="0.0" width="319" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zOX-MG-0al" secondAttribute="height" multiplier="40:71" id="xAU-SX-cEn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ask me anything and shake to reveal the answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-lN-WWo">
+                                <rect key="frame" x="75" y="257" width="200" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="2nF-Qm-l6S"/>
+                                    <constraint firstAttribute="width" constant="200" id="LBp-1H-Ewx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.25849136843036341" blue="0.29284137228260865" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zOX-MG-0al" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="A3t-pC-4eh"/>
+                            <constraint firstItem="zOX-MG-0al" firstAttribute="centerY" secondItem="yEu-lN-WWo" secondAttribute="centerY" constant="30" id="JI8-la-oJ8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zOX-MG-0al" secondAttribute="trailing" id="Ovs-aA-tZK"/>
+                            <constraint firstAttribute="centerY" secondItem="yEu-lN-WWo" secondAttribute="centerY" id="Rh3-Z8-cwO"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zOX-MG-0al" secondAttribute="bottom" id="eed-Bz-Ezv"/>
+                            <constraint firstAttribute="centerX" secondItem="yEu-lN-WWo" secondAttribute="centerX" id="kKk-5S-0Tb"/>
+                            <constraint firstItem="zOX-MG-0al" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="s0t-x5-IhD"/>
+                            <constraint firstItem="zOX-MG-0al" firstAttribute="centerX" secondItem="yEu-lN-WWo" secondAttribute="centerX" id="x4R-Zy-UQd"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="zOX-MG-0al" id="1Ek-Uq-5Pm"/>
+                        <outlet property="prediction" destination="yEu-lN-WWo" id="TCq-Ch-2a7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="CB00001" width="320" height="568"/>
+    </resources>
 </document>

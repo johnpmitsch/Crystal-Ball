@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+@class CrystalBall;
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *prediction;
+@property (strong, nonatomic) CrystalBall *crystalBall;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
+-(void)makePrediction;
 
 @end
 
